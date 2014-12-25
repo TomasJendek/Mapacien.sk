@@ -3,18 +3,37 @@
   #sidebar-wrapper
     %ul.sidebar-nav
       %li
-        %a{:href => "#"} average price:
-        .average-price
+        .infobox-info
+          Vypočítané z inzerátov nachádzajúcich sa na mape:
       %li
-        %a{:href => "#"} number of properties:
+        .left
+          Priemerná cena:
+        .right
+          .average-price
+            0
       %li
-        %a{:href => "#"} price per m2:
+        .left
+          Priemerná cena m2:
+        .right
+          .average-price-m2
+            0
+      %li
+        .left
+          Počet ponúk:
+        .right
+          .num-of-properties
+            0
 
   #page-content-wrapper
     .container-fluid
       .row
         .col-lg-12
-          %input{id: "autocomplete"}
+          .autocomplete-div
+            .autocomplete-left
+              Vyberte lokalitu pomocou mapy
+            .autocomplete-right
+              %input{id: "autocomplete", placeholder: "alebo zadajte lokalitu ručne", class: "autocomplete-input"}
+
           .gmap3{style: "min-height: 500px; min-width:200px;"}
 
 .bounds

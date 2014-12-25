@@ -28,19 +28,5 @@ $ ->
     $(this).val ""
 
 
-
-  # Send btn clicked
-  $('.filter_form').submit(() ->
-    #$container = $('.results')
-    #send_form($container)
-  )
-
-  $('.filter').bind('change paste keyup', (e) ->
-    # if sorting is changed
-    e.preventDefault()
-  )
-
-
-
   
 

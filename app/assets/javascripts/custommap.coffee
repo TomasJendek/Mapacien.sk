@@ -1,6 +1,13 @@
 class @Map
   constructor: ->
 
+  $('#filter').bind('change paste keyup', (e) ->
+    # if sorting is changed
+    e.preventDefault()
+
+    send_form()
+  )
+
   $("#autocomplete").autocomplete(
     source: ->
       $(".gmap3").gmap3 getaddress:
@@ -48,20 +55,27 @@ class @Map
 
       events: # sets up the events of the actual map
         zoom_changed: ->
-          #alert("zoom")
+          map_bounds = getBounds $(this).gmap3("get")
+          send_form($(this))
         dragend: ->
-          map = $(this).gmap3("get")
-          map_bounds = map.getBounds()
-
-          $('#bounds').val(map_bounds)
-          send_form($(this), map_bounds)
+          map_bounds = getBounds $(this).gmap3("get")
+          send_form($(this))
 
         idle: ->
-          #alert("idle")
+          map_bounds = getBounds $(this).gmap3("get")
+          send_form($(this))
+
+          $('#area-range').slider change:(event, ui) ->
+            map_bounds = getBounds $(".gmap3").gmap3("get")
+            send_form($(this), map_bounds)
 
 
+  getBounds = (map) ->
+    map_bounds = map.getBounds()
+    $('#bounds').val(map_bounds)
 
-  send_form = ($container, bounds) ->
+
+  send_form = ($container) ->
     valuesToSubmit = $('.filter_form').serialize()
 
     $.ajax({
@@ -72,8 +86,12 @@ class @Map
     }).success((input_data) ->
       #json_properties = JSON.parse(input_data.json_properties) # Property JSON objects
 
-      $('.average-price').text(input_data['averagePrice'])
-      console.log(input_data)
+      $('.average-price').text(input_data['averagePrice']+" €")
+
+      $('.average-price-m2').text(input_data['averagePriceM2']+" €")
+
+      $('.num-of-properties').text(input_data['numOfProperties'])
+
 
 
       #$container.append(JST["filter/results"]({properties : json_properties}))
