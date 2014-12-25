@@ -1,0 +1,24 @@
+#wrapper
+  / Sidebar
+  #sidebar-wrapper
+    %ul.sidebar-nav
+      %li
+        %a{:href => "#"} average price:
+        .average-price
+      %li
+        %a{:href => "#"} number of properties:
+      %li
+        %a{:href => "#"} price per m2:
+
+  #page-content-wrapper
+    .container-fluid
+      .row
+        .col-lg-12
+          %input{id: "autocomplete"}
+          .gmap3{style: "min-height: 500px; min-width:200px;"}
+
+.bounds
+
+  - content_for :scripts do
+    = javascript_include_tag "properties"
+    = javascript_include_tag "https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places,visualization"

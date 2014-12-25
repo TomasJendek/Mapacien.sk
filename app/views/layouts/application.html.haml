@@ -1,0 +1,21 @@
+!!!
+%html
+  %head
+    %title Localitymeter
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Poiret+One:400,300&subset=latin,latin-ext")
+    = csrf_meta_tags
+  %body
+    .navbar.navbar-inverse.navbar-fixed-top
+      .col-md-4
+        %h1
+          Realitymeter.sk
+      .col-md-8
+        = render :partial => "properties/filter"
+
+    = yield
+    #footer
+      .container
+
+    = yield :js_data
+    = yield :scripts

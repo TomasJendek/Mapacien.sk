@@ -1,0 +1,64 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  average_price: "priemerná cena"
+  better_decisions_h1: "lepšie rozhodovanie"
+  better_decisions_p: "zisti v akej cenovej relácii sa predávajú nehnuteľnosti v danej lokalite a buď o krok vpredu pri jednaní o cenovej ponuke"
+
+  easy_search_h1: "jednoduché hľadanie"
+  easy_search_p: "pomocou jednoduchej navigácie na mape definuj lokalitu, alebo zadaj ulicu, obec, mesto priamo do vyhľadávača. stačí minimálna námaha a získaj cenné informácie"
+
+  average_prices_h1: "priemerné ceny"
+  average_prices_p: "poskytujeme aktuálne informácie o cenách nehnuteľností z najväčších slovenských realitných portálov. Okrem toho poskytujeme informácie o kvalite lokality"
+
+  num_of_properties: "počet ponúk"
+
+  show_filter: "Zobraziť možnosti filtrovania"
+
+
+  map_1: "Vyberte lokalitu pomocou mapy"
+  map_2: "cena je vyrátaná z plochy zobrazenej na mape"
+
+
+  sell: "predaj"
+  rent: "prenajom"
+
+  studio: "garzonka"
+  room_1: "1 izba"
+  room_2: "2 izby"
+  room_3: "3 izby"
+  room_4: "4 izby"
+
+  state_1: "novostavba"
+  state_2: "pôvodný stav"
+  state_3: "rekonštrukcia"
+
+  restaurant: "reštaurácia"
+  atm: "bankomaty"
+  shop: "potraviny"
+  pharmacy: "lekáreň"
+  baby_school: "škôlka"
+  post_office: "pošta"
+  coffe: "kaviareň"
+  bakery: "pekáreň"
+
+

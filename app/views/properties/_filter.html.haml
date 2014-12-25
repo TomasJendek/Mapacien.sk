@@ -1,0 +1,17 @@
+= form_tag('/properties/index', :method => :get, :remote => true, :class => "filter_form", :id => "filter") do
+  = hidden_field_tag :locale, params[:locale]
+  = hidden_field_tag :bounds
+  .filter-container.row
+    .col-md-2
+      = select_tag(:property_category, options_for_select(PropertiesHelper.translate_categories), :class => "select-style")
+    .col-md-2
+      = select_tag(:property_type, options_for_select(PropertiesHelper.translate_property_type), :class => "select-style")
+    .col-md-2
+      = select_tag(:state_type, options_for_select(PropertiesHelper.translate_state_type), :class => "select-style", :prompt => 'stav')
+    .col-md-2
+      = select_tag(:num_of_rooms, options_for_select(PropertiesHelper.translate_rooms), :class => "select-style", :prompt => 'izby')
+    .col-md-4
+      .slider
+        #area-out.value.slider-text
+        = hidden_field_tag :area
+        #area-range
