@@ -35,7 +35,17 @@
               %input{id: "autocomplete", placeholder: "alebo zadajte lokalitu ručne", class: "autocomplete-input"}
 
           .gmap3{style: "min-height: 500px; min-width:200px;"}
+      .row
+        #footer
+          .container
 
+          Priemerné ceny predaja nehnuteľností sa rátajú z celkovej predajnej sumy. Priemerné ceny prenájmu sú vyrátané z ceny za mesiac vrátane energií.
+          Všetky priemery sa počítajú z inzerátov, ktoré sa nachádzajú na uliciach zobrazených na aktuálnej mape.
+          %br
+          %br
+          Počet ponúk z ktorých sú vypočítané priemery:
+          %b
+            = Property.all.count
 .bounds
 
   - content_for :scripts do

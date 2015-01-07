@@ -1,22 +1,21 @@
 !!!
 %html
   %head
-    %title Localitymeter
+    %title Mapacien.sk | Zistite cenu nehnuteľností
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     %link(rel="stylesheet" href="http://fonts.googleapis.com/css?family=Titillium+Web:400,300&subset=latin,latin-ext")
     = csrf_meta_tags
+    = analytics_init
   %body
     .navbar.navbar-inverse.navbar-fixed-top
       .col-md-3
         %h1
-          Realitymeter.sk
+          Mapacien.sk
       .col-md-9
         = render :partial => "properties/filter"
 
     = yield
-    #footer
-      .container
-        ahoj
+
 
     = yield :js_data
     = yield :scripts

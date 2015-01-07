@@ -40,6 +40,7 @@ GEM
     erubis (2.7.0)
     execjs (2.2.2)
     gmaps4rails (2.1.2)
+    google-analytics-rails (0.0.6)
     haml (4.0.5)
       tilt
     hike (1.2.3)
@@ -135,6 +136,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   enum_help
   gmaps4rails
+  google-analytics-rails
   haml
   jbuilder (~> 2.0)
   jquery-rails
