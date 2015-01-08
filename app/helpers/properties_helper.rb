@@ -5,7 +5,7 @@ module PropertiesHelper
   end
 
   def self.translate_rooms
-    [[ "One room", "studio"], [I18n.t(:room_1), "one"], [I18n.t(:room_2), "two"], [I18n.t(:room_3), "three"], [I18n.t(:room_4), "four"]]
+    [[ "Garzonka", "studio"], [I18n.t(:room_1), "one"], [I18n.t(:room_2), "two"], [I18n.t(:room_3), "three"], [I18n.t(:room_4), "four"]]
   end
 
   def self.translate_state_type
