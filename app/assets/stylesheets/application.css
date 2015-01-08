@@ -28,6 +28,7 @@ body {
 }
 
 .navbar-inverse{
+    padding: 5px;
     border-color: #00ae6a;
     background-image:
     linear-gradient(
@@ -54,6 +55,7 @@ body {
 
 
 #wrapper {
+    padding-top: 30px;
     padding-left: 0;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;

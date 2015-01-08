@@ -12,7 +12,7 @@ $ = jQuery
 
 $ ->
   # Code for map
-  lat = 48.12; lon =17.12; zoom = 10
+  lat = 48.147358; lon =17.1486031; zoom = 13
 
   #make slider
   slider = new Slider()
